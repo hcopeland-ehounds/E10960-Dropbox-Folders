@@ -3,92 +3,1161 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>E10960 Tarpon Springs Housing Authority</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>E10960 Tarpon Springs Housing Association – Personal Dropbox Folder Listing</title>
 <style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Roboto, Inter, sans-serif;
-    background: #20242f;
-    color: #e4e6eb;
-    min-height: 100vh;
-  }
-  header {
-    padding: 16px 20px;
-    background: #2b2f3a;
-    border-bottom: 1px solid #3a3f4b;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 600;
-  }
-  header p {
-    margin: 4px 0 0;
-    font-size: 14px;
-    color: #9ca3af;
-  }
-  main {
-    padding: 20px;
-  }
-  ul.tree {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
-  .tree li {
-    margin: 4px 0;
-  }
-  .tree details summary {
-    cursor: pointer;
-    padding: 4px 6px;
-    border-radius: 6px;
-    display: inline-block;
-    transition: background .2s;
-  }
-  .tree details summary:hover {
-    background: rgba(255,255,255,0.08);
-  }
-  .tree details summary::-webkit-details-marker {
-    display:none;
-  }
-  .tree ul {
-    margin-left: 20px;
-    padding-left: 12px;
-    border-left: 1px dashed #444;
-  }
-  .file {
-    padding: 4px 6px;
-    border-radius: 6px;
-    display: inline-block;
-    transition: background .2s;
-  }
-  .file:hover {
-    background: rgba(255,255,255,0.08);
-  }
-  .icon {
-    margin-right: 6px;
-  }
-
-  main {
-    display: flex;
-    justify-content: center;
-  }
-  .tree {
-    width: 600px;
-  }
-</style>
+    :root {
+      --bg: #8aaed1;  /* much darker muted blue */  /* original muted blue */
+      --card: #ffffff;
+      --text: #0f1c2e;
+      --muted: #5c6b7a;
+      --accent: #2b6cb0;
+      --border: #d6e2f1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.35;
+    }
+    header {
+      padding: 2rem 1.25rem 1rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 .25rem;
+      font-size: clamp(1.4rem, 2.5vw + 1rem, 2rem);
+      font-weight: 800;
+      letter-spacing: .2px;
+      color: var(--text);
+    }
+    .subtitle {
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem 3rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.25rem 1rem;
+      box-shadow: 0 8px 20px rgba(15, 28, 46, 0.06);
+    }
+    details.node > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: .3rem .4rem;
+      border-radius: 8px;
+      transition: background-color .15s ease, color .15s ease;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    details.node > summary::marker,
+    details.node > summary::-webkit-details-marker { display: none; }
+    details.node > summary::before {
+      content: "▸";
+      display: inline-block;
+      width: 1rem;
+      text-align: center;
+      transform: rotate(0deg);
+      transition: transform .15s ease;
+      color: var(--accent);
+      font-weight: 900;
+    }
+    details[open].node > summary::before {
+      transform: rotate(90deg);
+    }
+    details.node > summary:hover {
+      background: #f3f7fd;
+    }
+    ul {
+      list-style: none;
+      margin: .15rem 0 .35rem .85rem;
+      padding-left: 1rem;
+      border-left: 1px dashed var(--border);
+    }
+    li.leaf {
+      margin: .1rem 0 .1rem 0;
+      padding: .25rem .4rem .25rem 1.35rem;
+      position: relative;
+      border-radius: 6px;
+    }
+    li.leaf::before {
+      content: "•";
+      position: absolute;
+      left: .3rem;
+      color: var(--muted);
+    }
+    .legend {
+      display: flex;
+      gap: .6rem;
+      flex-wrap: wrap;
+      margin-bottom: .75rem;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    .btn {
+      border: 1px solid var(--border);
+      background: #f7fbff;
+      border-radius: 999px;
+      padding: .35rem .7rem;
+      font-size: .9rem;
+      cursor: pointer;
+    }
+    .btn:hover { background: #eef6ff; }
+  </style>
 </head>
 <body>
 <header>
-<h1>E10960 Tarpon Springs Housing Authority</h1>
-<p>Personal Dropbox Folder List</p>
+<h1>E10960 Tarpon Springs Housing Association</h1>
+<div class="subtitle">Personal Dropbox Folder Listing</div>
 </header>
-<main>
-<ul class="tree">
-<li class="dir"><details open=""><summary><span class="icon">📁</span>Users</summary><ul><li class="dir"><details open=""><summary><span class="icon">📁</span>Robin</summary><ul><li class="dir"><details open=""><summary><span class="icon">📁</span>Dropbox</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>August 2019 Go to Cloud Robbin Home</summary><ul><li class="file"><span class="icon">📁</span>2017 Dell Laptop Acronis Back Up download 11-2020</li><li class="dir"><details><summary><span class="icon">📁</span>A Robbin Pictures</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Abu Pictures</summary><ul><li class="file"><span class="icon">📁</span>Diangy Hawaii Photos 2018</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Archived Photos Symmetric back up 1</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Acronis Pictures 12.3.20</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Pictures</summary><ul><li class="file"><span class="icon">📁</span>Cops n Kids 2014-15</li><li class="file"><span class="icon">📁</span>Peace4Tarpon 2015</li><li class="file"><span class="icon">📁</span>Sotelo Family 2015</li><li class="file"><span class="icon">📁</span>Sotelo Family 2016 July August</li><li class="file"><span class="icon">📁</span>Sotelo Family Dec 2014</li><li class="file"><span class="icon">📁</span>Walgreens Orders</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Cops n Kids 2014-15</li><li class="file"><span class="icon">📁</span>Sotelo Family 2015</li><li class="file"><span class="icon">📁</span>Sotelo Family Dec 2014</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Back Up Silver Flash Drive 2009</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>USB Drive</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>CCC</summary><ul><li class="file"><span class="icon">📁</span>RFP</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>MSASS</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>MSASS 2007</summary><ul><li class="file"><span class="icon">📁</span>YWDP 2008</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Old Laptop 2000 Archived</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>PhotoShow Print &amp; Share Childhood</summary><ul><li class="file"><span class="icon">📁</span>2009</li></ul></details></li><li class="file"><span class="icon">📁</span>QuickenDocs</li><li class="dir"><details><summary><span class="icon">📁</span>Robbin Old Stuff</summary><ul><li class="file"><span class="icon">📁</span>BACB_files</li><li class="file"><span class="icon">📁</span>BACBTaskList_files</li><li class="file"><span class="icon">📁</span>Financial</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Old Laptop Back Up 2013</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Archived</summary><ul><li class="file"><span class="icon">📁</span>ArchivedAK</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>OST</li><li class="dir"><details><summary><span class="icon">📁</span>Pictures to store</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Baby 2009</summary><ul><li class="file"><span class="icon">📁</span>Baby 2009</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Robbin and Fred First Year 2009</li><li class="file"><span class="icon">📁</span>Robbin's</li><li class="file"><span class="icon">📁</span>Tarpon Springs Housing Authority</li><li class="file"><span class="icon">📁</span>TSHA</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Cole's Birthday Brady Kerri Tracy</li><li class="dir"><details><summary><span class="icon">📁</span>Cops n Kids Pictures</summary><ul><li class="file"><span class="icon">📁</span>Cops n Kids 2014-15</li><li class="dir"><details><summary><span class="icon">📁</span>Cops n Kids 2018</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Dec 10</summary><ul><li class="file"><span class="icon">📁</span>100NCD40</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Walgreens Cops n Kids</summary><ul><li class="file"><span class="icon">📁</span>Photo Albums</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Marlena Baby Shower 10-2009</li><li class="dir"><details><summary><span class="icon">📁</span>Orignal Walgreens BackUp</summary><ul><li class="file"><span class="icon">📁</span>2009 Walgreens Back Up</li><li class="file"><span class="icon">📁</span>2010 Walgreens Back Up</li><li class="dir"><details><summary><span class="icon">📁</span>2011 Walgreens Back Up</summary><ul><li class="file"><span class="icon">📁</span>Elijah June 2011 Birth</li><li class="file"><span class="icon">📁</span>Fall 2011</li><li class="file"><span class="icon">📁</span>Summer 2011</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>2012 Walgreens Back Up</summary><ul><li class="file"><span class="icon">📁</span>December 2012</li><li class="file"><span class="icon">📁</span>Fall 2012</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>2013 Walgreens Back Up</summary><ul><li class="file"><span class="icon">📁</span>April 2013</li><li class="file"><span class="icon">📁</span>December 2013</li><li class="file"><span class="icon">📁</span>November 2013</li><li class="file"><span class="icon">📁</span>September 2013</li></ul></details></li><li class="file"><span class="icon">📁</span>2014 Walgreens Back Up</li><li class="file"><span class="icon">📁</span>Puerto Rico Marlena Birthday Christmas 2011</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Robbin Photos 2019</summary><ul><li class="file"><span class="icon">📁</span>Belize June 2019</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Robbin Photos 2020</summary><ul><li class="file"><span class="icon">📁</span>Walgreens Orders</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Robbin Photos 2021</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Sawubona</summary><ul><li class="file"><span class="icon">📁</span>April 2021</li><li class="file"><span class="icon">📁</span>March 2019</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Solelo Family 2019</li><li class="file"><span class="icon">📁</span>Sotelo Family 2015</li><li class="dir"><details><summary><span class="icon">📁</span>Sotelo Family 2018</summary><ul><li class="file"><span class="icon">📁</span>June 2018</li><li class="dir"><details><summary><span class="icon">📁</span>March April May 2018</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Colorado 2018</summary><ul><li class="file"><span class="icon">📁</span>Extras</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>November 2018</li></ul></details></li><li class="file"><span class="icon">📁</span>Sotelo Family Dec 2014</li><li class="dir"><details><summary><span class="icon">📁</span>Sotelo Pictures 2016</summary><ul><li class="file"><span class="icon">📁</span>Sotelo Family 2016 July August</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Sotelo Pictures 2017</summary><ul><li class="file"><span class="icon">📁</span>Sotelo Family December 2017</li><li class="file"><span class="icon">📁</span>Sotelo Family June 2017</li><li class="file"><span class="icon">📁</span>Sotelo Family October-December 2017</li><li class="file"><span class="icon">📁</span>Sotelo Summer July August 2017</li></ul></details></li><li class="file"><span class="icon">📁</span>Videos 2018 Download</li><li class="dir"><details><summary><span class="icon">📁</span>Walgreens Orders</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>April May 2018</summary><ul><li class="file"><span class="icon">📁</span>April 2018</li></ul></details></li><li class="file"><span class="icon">📁</span>December 2016 Walgreens</li><li class="file"><span class="icon">📁</span>June Walgreens 2017</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>August Go to Cloud 2015</summary><ul><li class="file"><span class="icon">📁</span>Cops n Kids Financials FY2014-15</li><li class="file"><span class="icon">📁</span>Cops n Kids FY15-16</li><li class="file"><span class="icon">📁</span>DJJ Prevention Diversion Grant FY2014-15</li><li class="file"><span class="icon">📁</span>Hispanic Leadership Council</li><li class="file"><span class="icon">📁</span>Human Resources CK</li><li class="file"><span class="icon">📁</span>MARC Grant</li><li class="file"><span class="icon">📁</span>Overlay Provider Docs</li><li class="dir"><details><summary><span class="icon">📁</span>Pinellas COunty CDBG Grant 2014-15</summary><ul><li class="file"><span class="icon">📁</span>Final Bids</li></ul></details></li><li class="file"><span class="icon">📁</span>Robbin</li><li class="file"><span class="icon">📁</span>TSHA LCHC Agency Documentation 2014-15</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Backup_June_25_2014</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Documents</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Documents</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Backup Files</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Robbin's Docs</summary><ul><li class="file"><span class="icon">📁</span>CCC</li><li class="dir"><details><summary><span class="icon">📁</span>Employment</summary><ul><li class="file"><span class="icon">📁</span>TSHA Spring 2011</li></ul></details></li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>DocuVantage</li><li class="file"><span class="icon">📁</span>Fred's</li><li class="dir"><details><summary><span class="icon">📁</span>Housing Authority</summary><ul><li class="file"><span class="icon">📁</span>Adminstration</li><li class="file"><span class="icon">📁</span>Board</li><li class="file"><span class="icon">📁</span>Conferences</li><li class="dir"><details><summary><span class="icon">📁</span>Human Resources</summary><ul><li class="file"><span class="icon">📁</span>Performance Reviews</li><li class="file"><span class="icon">📁</span>Personnel Admin</li><li class="file"><span class="icon">📁</span>Timesheets and Holidays</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Trainings</summary><ul><li class="file"><span class="icon">📁</span>Registration Receipts</li></ul></details></li><li class="file"><span class="icon">📁</span>Trips out of town</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>JWB</summary><ul><li class="file"><span class="icon">📁</span>ED Steering Committee</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Peace4Tarpon</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Community Action Committee</summary><ul><li class="file"><span class="icon">📁</span>Trainings</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Grant Writing</summary><ul><li class="file"><span class="icon">📁</span>Allegheny Major Grants</li><li class="file"><span class="icon">📁</span>New folder</li></ul></details></li><li class="file"><span class="icon">📁</span>Peace4Tarpon Administration</li><li class="file"><span class="icon">📁</span>Research for Childrens Initiative</li><li class="file"><span class="icon">📁</span>Social Marketing Committee</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Personal Robbin's</summary><ul><li class="file"><span class="icon">📁</span>Abu stuff</li><li class="dir"><details><summary><span class="icon">📁</span>Finances</summary><ul><li class="file"><span class="icon">📁</span>New folder</li></ul></details></li><li class="file"><span class="icon">📁</span>Health</li><li class="file"><span class="icon">📁</span>House Projects</li><li class="file"><span class="icon">📁</span>Marlena and Elijah</li><li class="dir"><details><summary><span class="icon">📁</span>My Journey</summary><ul><li class="file"><span class="icon">📁</span>Receipts</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>UT NonProfit Leadership</summary><ul><li class="file"><span class="icon">📁</span>Metropolitan Ministries</li><li class="dir"><details><summary><span class="icon">📁</span>UT Strategic Mgt- Course 1</summary><ul><li class="file"><span class="icon">📁</span>Governance</li></ul></details></li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Quicken</li></ul></details></li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Robbin</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>529 Plans 6-2018</summary><ul><li class="file"><span class="icon">📁</span>Elijah 529 Plan</li></ul></details></li><li class="file"><span class="icon">📁</span>Alonso High School</li><li class="file"><span class="icon">📁</span>Car Insurance</li><li class="dir"><details><summary><span class="icon">📁</span>Dad</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Charlotte home</summary><ul><li class="file"><span class="icon">📁</span>Property Insurance</li></ul></details></li><li class="file"><span class="icon">📁</span>St. Charlotte House</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>ED Performance Review 2018</summary><ul><li class="file"><span class="icon">📁</span>ED Training  Prof Dev 2018</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Elijah</summary><ul><li class="file"><span class="icon">📁</span>7th grade Walker</li><li class="file"><span class="icon">📁</span>8th Grade Walker</li><li class="file"><span class="icon">📁</span>BASEBALL</li><li class="file"><span class="icon">📁</span>Elijah PSY</li><li class="dir"><details><summary><span class="icon">📁</span>Elijah School Admin</summary><ul><li class="file"><span class="icon">📁</span>BAND</li><li class="file"><span class="icon">📁</span>Mrs. Childs Grade 3</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Elijah WALKER 6th Grade</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>History- Shelton</summary><ul><li class="file"><span class="icon">📁</span>December 22</li></ul></details></li><li class="file"><span class="icon">📁</span>Walker Admin</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Elijah-- Linda Mood Bell</summary><ul><li class="file"><span class="icon">📁</span>Bay Academic Supports</li></ul></details></li><li class="file"><span class="icon">📁</span>Home work</li><li class="file"><span class="icon">📁</span>Sports</li><li class="file"><span class="icon">📁</span>Summer Camp</li></ul></details></li><li class="file"><span class="icon">📁</span>Entertainment</li><li class="dir"><details><summary><span class="icon">📁</span>Family</summary><ul><li class="file"><span class="icon">📁</span>Sotelo Family Admin</li><li class="dir"><details><summary><span class="icon">📁</span>Sotelo Larkin Documents</summary><ul><li class="file"><span class="icon">📁</span>Copies of Financial docs February</li><li class="file"><span class="icon">📁</span>Court Documents</li></ul></details></li><li class="file"><span class="icon">📁</span>Summer Camp 2019</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Fiscal Management</summary><ul><li class="file"><span class="icon">📁</span>Raymond James</li><li class="file"><span class="icon">📁</span>Robbin Budgets</li><li class="dir"><details><summary><span class="icon">📁</span>Suncoast Credit Union</summary><ul><li class="file"><span class="icon">📁</span>Bank Statements</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Taxes</summary><ul><li class="file"><span class="icon">📁</span>2024 Tax documents</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Fountainhead Townhouse</li><li class="file"><span class="icon">📁</span>General Admin</li><li class="dir"><details><summary><span class="icon">📁</span>Hayfield Way</summary><ul><li class="file"><span class="icon">📁</span>TECO</li><li class="file"><span class="icon">📁</span>Water</li></ul></details></li><li class="file"><span class="icon">📁</span>ICMA 401K Account</li><li class="dir"><details><summary><span class="icon">📁</span>Kids Enrichments</summary><ul><li class="file"><span class="icon">📁</span>Basketball</li></ul></details></li><li class="file"><span class="icon">📁</span>Lake House</li><li class="dir"><details><summary><span class="icon">📁</span>Legal</summary><ul><li class="file"><span class="icon">📁</span>Amber Boles</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Letters</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Thoughts</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Financial Affidavit</summary><ul><li class="file"><span class="icon">📁</span>Copy of Expenses Assets Liabilities</li><li class="file"><span class="icon">📁</span>Copy of Expenses Assets Liabilities - Copy 1</li></ul></details></li><li class="file"><span class="icon">📁</span>Larkin FIle</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Marlena</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>4th grade</summary><ul><li class="file"><span class="icon">📁</span>Online Learning Classwork April 20</li></ul></details></li><li class="file"><span class="icon">📁</span>5th Grade Ms. Andux</li><li class="file"><span class="icon">📁</span>7TH GRADE Walker Marlena</li><li class="file"><span class="icon">📁</span>8th Grade</li><li class="file"><span class="icon">📁</span>8th Grade Walker</li><li class="dir"><details><summary><span class="icon">📁</span>Alonso High</summary><ul><li class="file"><span class="icon">📁</span>9 th Grade</li></ul></details></li><li class="file"><span class="icon">📁</span>Girl Scouts</li><li class="file"><span class="icon">📁</span>Marlena admin</li><li class="file"><span class="icon">📁</span>School Documentation Grade 5</li><li class="file"><span class="icon">📁</span>SICKLES HIGH</li><li class="dir"><details><summary><span class="icon">📁</span>WALKER Middle 6th Grade</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Marlena 6th Grade</summary><ul><li class="file"><span class="icon">📁</span>HISTORY Class Ms. Shelton</li><li class="file"><span class="icon">📁</span>PE Course Ms. Gaberino</li><li class="file"><span class="icon">📁</span>Period 1 MATH Mr. Stoll</li><li class="file"><span class="icon">📁</span>Period 6 ELA Stephens and Seanoa</li><li class="file"><span class="icon">📁</span>READING Class ms. Lowe</li><li class="file"><span class="icon">📁</span>SCIENCEClass Ms. Smith</li><li class="dir"><details><summary><span class="icon">📁</span>Walker Admin</summary><ul><li class="file"><span class="icon">📁</span>Report Cards  2021-22</li></ul></details></li></ul></details></li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Medical</summary><ul><li class="file"><span class="icon">📁</span>Dad Richard</li><li class="dir"><details><summary><span class="icon">📁</span>Kids Medical</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>CIGNA</summary><ul><li class="file"><span class="icon">📁</span>Claim Form</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Elijah Medical</summary><ul><li class="file"><span class="icon">📁</span>PSY Elijah</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Marlena Medical</summary><ul><li class="file"><span class="icon">📁</span>Audiology</li><li class="file"><span class="icon">📁</span>Dr Gharavi Psychiatry</li><li class="dir"><details><summary><span class="icon">📁</span>Marlena PSY</summary><ul><li class="file"><span class="icon">📁</span>Meghan-   Kinsler Psy</li></ul></details></li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Robbin insurance Info</li><li class="dir"><details><summary><span class="icon">📁</span>Robbin Medical</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Spectra and other Aug 23</summary><ul><li class="file"><span class="icon">📁</span>Lab Test Results</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Robbin MH</li><li class="file"><span class="icon">📁</span>Robbin TASC Card receipts</li></ul></details></li><li class="file"><span class="icon">📁</span>Mindfullness</li><li class="dir"><details><summary><span class="icon">📁</span>OUR FAMILY WIZARD</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Finances</summary><ul><li class="file"><span class="icon">📁</span>OFW Admin</li><li class="dir"><details><summary><span class="icon">📁</span>School Expenses</summary><ul><li class="file"><span class="icon">📁</span>2021 Lake Mag</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>OFW Calendar</li><li class="dir"><details><summary><span class="icon">📁</span>OFW Receipts</summary><ul><li class="file"><span class="icon">📁</span>Walker School Receipts</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Professional Dev</summary><ul><li class="file"><span class="icon">📁</span>Bradenton HA</li><li class="file"><span class="icon">📁</span>Travel Prof Dev</li><li class="dir"><details><summary><span class="icon">📁</span>TSHA Robbin</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Incident Reporting March 2025</summary><ul><li class="file"><span class="icon">📁</span>Derek</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Visioning Board</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Robbin Admin</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>New folder</summary><ul><li class="file"><span class="icon">📁</span>Life Admin</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Sawubona</li><li class="dir"><details><summary><span class="icon">📁</span>Schools</summary><ul><li class="file"><span class="icon">📁</span>FL Charter School docs</li><li class="file"><span class="icon">📁</span>Kids School Admin</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Summer Camp</summary><ul><li class="file"><span class="icon">📁</span>Camps Enrichment 2021</li><li class="file"><span class="icon">📁</span>SUMMER CAMPS 2022</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Taxes</summary><ul><li class="file"><span class="icon">📁</span>TAXES 2021</li></ul></details></li><li class="file"><span class="icon">📁</span>Taxes 2019 Forward</li><li class="file"><span class="icon">📁</span>Vacation</li><li class="dir"><details><summary><span class="icon">📁</span>Will &amp; Trust Robert Hines-  Robbin</summary><ul><li class="file"><span class="icon">📁</span>Attorney Robert Hines admin</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Robbin Misc back up TSHA docs</summary><ul><li class="file"><span class="icon">📁</span>Stubs</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>September 2015 Go to Cloud</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>October 2015 Go to Cloud</summary><ul><li class="file"><span class="icon">📁</span>Cops 'n Kids JWB Documentation FY15-16</li><li class="file"><span class="icon">📁</span>Cops n Kids Financials FY2014-15</li><li class="file"><span class="icon">📁</span>Cops n Kids Financials FY2015-16</li><li class="file"><span class="icon">📁</span>Cops n Kids FY15-16</li><li class="file"><span class="icon">📁</span>Cops n Kids Human Resources- Personnel</li><li class="file"><span class="icon">📁</span>DJJ Prevention Diversion Grant FY2014-15</li><li class="file"><span class="icon">📁</span>Hispanic Leadership Council</li><li class="file"><span class="icon">📁</span>Human Resources CK</li><li class="file"><span class="icon">📁</span>JWB General</li><li class="dir"><details><summary><span class="icon">📁</span>MARC Grant</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>MARC Year 1 Implementation</summary><ul><li class="file"><span class="icon">📁</span>Evaluations</li><li class="file"><span class="icon">📁</span>LCHC Personnel HR</li><li class="file"><span class="icon">📁</span>MARC Fiscal Management</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Overlay Provider Docs</li><li class="dir"><details><summary><span class="icon">📁</span>Pinellas COunty CDBG Grant 2014-15</summary><ul><li class="file"><span class="icon">📁</span>Final Bids</li></ul></details></li><li class="file"><span class="icon">📁</span>Robbin</li><li class="file"><span class="icon">📁</span>TSHA LCHC Agency Documentation 2014-15</li><li class="file"><span class="icon">📁</span>TSHA LCHC Personnel 2015</li></ul></details></li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>October 2015--July 2019 Go To Cloud</summary><ul><li class="file"><span class="icon">📁</span>718-720 North Avenue</li><li class="dir"><details><summary><span class="icon">📁</span>A Robbin Pictures</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Abu Pictures</summary><ul><li class="file"><span class="icon">📁</span>Diangy Hawaii Photos 2018</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Cops n Kids Pictures</summary><ul><li class="file"><span class="icon">📁</span>Cops n Kids 2014-15</li><li class="dir"><details><summary><span class="icon">📁</span>Cops n Kids 2018</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Dec 10</summary><ul><li class="file"><span class="icon">📁</span>100NCD40</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Peace4Tarpon 2015</li><li class="dir"><details><summary><span class="icon">📁</span>Walgreens Cops n Kids</summary><ul><li class="file"><span class="icon">📁</span>Photo Albums</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Solelo Family 2019</summary><ul><li class="file"><span class="icon">📁</span>Rick Camera June 19</li></ul></details></li><li class="file"><span class="icon">📁</span>Sotelo Family 2015</li><li class="dir"><details><summary><span class="icon">📁</span>Sotelo Family 2018</summary><ul><li class="file"><span class="icon">📁</span>June 2018</li><li class="dir"><details><summary><span class="icon">📁</span>March April May 2018</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Colorado 2018</summary><ul><li class="file"><span class="icon">📁</span>Extras</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>November 2018</li></ul></details></li><li class="file"><span class="icon">📁</span>Sotelo Family Dec 2014</li><li class="dir"><details><summary><span class="icon">📁</span>Sotelo Pictures 2016</summary><ul><li class="file"><span class="icon">📁</span>Sotelo Family 2016 July August</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Sotelo Pictures 2017</summary><ul><li class="file"><span class="icon">📁</span>Sotelo Family December 2017</li><li class="file"><span class="icon">📁</span>Sotelo Family June 2017</li><li class="file"><span class="icon">📁</span>Sotelo Family October-December 2017</li><li class="file"><span class="icon">📁</span>Sotelo Summer July August 2017</li></ul></details></li><li class="file"><span class="icon">📁</span>Videos 2018 Download</li><li class="dir"><details><summary><span class="icon">📁</span>Walgreens Orders</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>April May 2018</summary><ul><li class="file"><span class="icon">📁</span>April 2018</li></ul></details></li><li class="file"><span class="icon">📁</span>December 2016 Walgreens</li><li class="file"><span class="icon">📁</span>June Walgreens 2017</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Accolade Eagle Ridge Reports</li><li class="file"><span class="icon">📁</span>Accolade Oak Ridge Reports</li><li class="file"><span class="icon">📁</span>Accolade Property Management</li><li class="file"><span class="icon">📁</span>Accolade The Villages Reports</li><li class="dir"><details><summary><span class="icon">📁</span>Accounting Department</summary><ul><li class="file"><span class="icon">📁</span>Accounting Operating Policies and Procedures</li><li class="file"><span class="icon">📁</span>Audit Preparation</li><li class="file"><span class="icon">📁</span>Daily Accounting Management</li><li class="file"><span class="icon">📁</span>Persoonnel Job Descriptions</li><li class="file"><span class="icon">📁</span>Year End</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Annual Plan 2020</summary><ul><li class="file"><span class="icon">📁</span>2020 TSHA 5 Year Agency Plan</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>AON Cyber Insurance</summary><ul><li class="file"><span class="icon">📁</span>AON Cyber 2020</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Audits TSHA and LCHC</summary><ul><li class="file"><span class="icon">📁</span>Audited FDS</li></ul></details></li><li class="file"><span class="icon">📁</span>Bank of America</li><li class="dir"><details><summary><span class="icon">📁</span>Bank of America Cash Pro Module</summary><ul><li class="file"><span class="icon">📁</span>BoA Bank LCHC Bank Statements</li></ul></details></li><li class="file"><span class="icon">📁</span>Bid- Rapid Rehousing HLB</li><li class="file"><span class="icon">📁</span>Brown and Brown</li><li class="file"><span class="icon">📁</span>CDBG Clearwater 2020</li><li class="file"><span class="icon">📁</span>CDBG Pinellas 2021</li><li class="dir"><details><summary><span class="icon">📁</span>CDBG- Cops n Kids 2016</summary><ul><li class="file"><span class="icon">📁</span>CDBG Documentation 2018</li></ul></details></li><li class="file"><span class="icon">📁</span>CDBG- Homeshare 2016</li><li class="dir"><details><summary><span class="icon">📁</span>CFP 2016 Submission</summary><ul><li class="file"><span class="icon">📁</span>CFP HUD 50075.1 FY2008-2014</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>CFP 2017 Capital Fund January 2021</summary><ul><li class="file"><span class="icon">📁</span>CFP 2017 Contract Docs</li></ul></details></li><li class="file"><span class="icon">📁</span>CFP 2020</li><li class="file"><span class="icon">📁</span>CFP 2021</li><li class="file"><span class="icon">📁</span>CFP Capital Fund general</li><li class="file"><span class="icon">📁</span>CFP EPIC</li><li class="file"><span class="icon">📁</span>CHAP Award Info 2020</li><li class="file"><span class="icon">📁</span>City of Tarpon Springs</li><li class="file"><span class="icon">📁</span>Cohn Reznick Oak Ridge 2021</li><li class="file"><span class="icon">📁</span>CohnReznick Oak Ridge 2019</li><li class="file"><span class="icon">📁</span>CohnReznick The Villages 2020</li><li class="file"><span class="icon">📁</span>Collaterializing Accounts</li><li class="file"><span class="icon">📁</span>Contracting</li><li class="file"><span class="icon">📁</span>COOP</li><li class="file"><span class="icon">📁</span>Cops 'n Kids Financials JWB FY19-20</li><li class="dir"><details><summary><span class="icon">📁</span>Cops 'n Kids Financials JWB FY20-21</summary><ul><li class="file"><span class="icon">📁</span>FY20-21 JWB Cops n Kids Budget</li></ul></details></li><li class="file"><span class="icon">📁</span>Cops 'n Kids Financials JWB FY21-22</li><li class="file"><span class="icon">📁</span>Cops 'n Kids General</li><li class="file"><span class="icon">📁</span>Cops 'n Kids JWB Documentation FY15-16</li><li class="file"><span class="icon">📁</span>Cops 'n Kids Overlay Providers</li><li class="file"><span class="icon">📁</span>Cops n Kids 2017-18</li><li class="file"><span class="icon">📁</span>Cops n Kids Facility Buildings</li><li class="file"><span class="icon">📁</span>Cops n Kids Financials FY16-17</li><li class="file"><span class="icon">📁</span>Cops n Kids Financials FY2014-15</li><li class="file"><span class="icon">📁</span>Cops n Kids Financials FY2015-16</li><li class="file"><span class="icon">📁</span>Cops n Kids Financials FY2018-19</li><li class="file"><span class="icon">📁</span>Cops n Kids FY15-16</li><li class="dir"><details><summary><span class="icon">📁</span>Cops n Kids Human Resources- Personnel</summary><ul><li class="file"><span class="icon">📁</span>Job Descriptions CK personnel</li><li class="file"><span class="icon">📁</span>Performance Appraisals FY15-16</li></ul></details></li><li class="file"><span class="icon">📁</span>Cops n Kids JWB 2017-18</li><li class="file"><span class="icon">📁</span>Cops n Kids JWB FY2018-19</li><li class="file"><span class="icon">📁</span>Cops n Kids Marketing</li><li class="file"><span class="icon">📁</span>Cops n Kids Parenting</li><li class="dir"><details><summary><span class="icon">📁</span>COVID-19 CORONA Virus Response 2020</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Personnel COVID</summary><ul><li class="file"><span class="icon">📁</span>PPP FEMA</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>CRV Debbie Williams</li><li class="file"><span class="icon">📁</span>CVR Financial Advisor</li><li class="dir"><details><summary><span class="icon">📁</span>Cyber Insurance</summary><ul><li class="file"><span class="icon">📁</span>Cyber Liability Insur AON 2018</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>DJJ 10466 Back Up April 2017</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>DJJ 10466 Feb 28 Zipped</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>New folder</summary><ul><li class="file"><span class="icon">📁</span>DJJ RFP 10466</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>DJJ 10466 FINAL Zipped RFP 3-1-17</summary><ul><li class="file"><span class="icon">📁</span>DJJ RFP 10466</li></ul></details></li><li class="file"><span class="icon">📁</span>DJJ RFP 10466</li><li class="dir"><details><summary><span class="icon">📁</span>DJJ RFP 10466 Zipped 2-23-17</summary><ul><li class="file"><span class="icon">📁</span>DJJ RFP 10466</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>DJJ RFP 10466 Zipped Feb 22</summary><ul><li class="file"><span class="icon">📁</span>DJJ RFP 10466</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>DJJ Zipped 10466</summary><ul><li class="file"><span class="icon">📁</span>DJJ RFP 10466</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>DJJ Contract 10408 Year 2</li><li class="file"><span class="icon">📁</span>DJJ Contract 10408 Year 3</li><li class="file"><span class="icon">📁</span>DJJ Invest in Children Program #10408</li><li class="dir"><details><summary><span class="icon">📁</span>DJJ Prevention Diversion Grant FY2014-15</summary><ul><li class="file"><span class="icon">📁</span>2nd Year DJJ Contract Renewal July 2015</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>DJJ Program 3 Contract for 10466</summary><ul><li class="file"><span class="icon">📁</span>Year 1 DJJ Program 3</li><li class="file"><span class="icon">📁</span>Year 2 Contract 10536</li><li class="dir"><details><summary><span class="icon">📁</span>Year 3 Contract 10536</summary><ul><li class="file"><span class="icon">📁</span>Budget Fiscal Mgt</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>DJJ RFP 10630 Program 4</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Solicitation RFP 10630 Original PDF forms February</summary><ul><li class="file"><span class="icon">📁</span>Final RFP Bid Library Documents</li><li class="file"><span class="icon">📁</span>Forms 10630</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>YEAR 1 Contract 10660</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Year 1 Contracting</summary><ul><li class="file"><span class="icon">📁</span>Curriculum</li><li class="file"><span class="icon">📁</span>Fiscal Management</li><li class="dir"><details><summary><span class="icon">📁</span>FORMS 10660-  Mnthly Quartly Annually</summary><ul><li class="file"><span class="icon">📁</span>DJJ 4 Forms</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Job Descriptions</summary><ul><li class="file"><span class="icon">📁</span>RESUMES</li></ul></details></li><li class="file"><span class="icon">📁</span>Year 1 Budgeting Fiscal</li><li class="file"><span class="icon">📁</span>Year 1 COVID</li><li class="file"><span class="icon">📁</span>Year 1 Personnel</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Year 2 Contract 10660</summary><ul><li class="file"><span class="icon">📁</span>Year 2 October 2021 Invoicing packet</li></ul></details></li><li class="file"><span class="icon">📁</span>Year 3 Contract 10660</li></ul></details></li><li class="file"><span class="icon">📁</span>DJJ Solicitation 10344 FY16-17</li><li class="file"><span class="icon">📁</span>DUNS Number  SAM Registration</li><li class="file"><span class="icon">📁</span>Eagle Ridge 2021</li><li class="dir"><details><summary><span class="icon">📁</span>Eagle Ridge Apartments</summary><ul><li class="file"><span class="icon">📁</span>FHFC meetings</li></ul></details></li><li class="file"><span class="icon">📁</span>Eagle Ridge Ending Phase- Stabilization</li><li class="file"><span class="icon">📁</span>Eagle Ridge Financing Plan</li><li class="file"><span class="icon">📁</span>Eagle Ridge General Admin</li><li class="file"><span class="icon">📁</span>Eagle Ridge Ground Breaking</li><li class="file"><span class="icon">📁</span>Eagle Ridge Insurance Policies</li><li class="file"><span class="icon">📁</span>Eagle Ridge ORIGINALS</li><li class="file"><span class="icon">📁</span>Eagle Ridge RAD CHAP 2018</li><li class="dir"><details><summary><span class="icon">📁</span>Eagle Ridge- Relocation Plan</summary><ul><li class="file"><span class="icon">📁</span>Resident Notice Documents</li></ul></details></li><li class="file"><span class="icon">📁</span>ED Forum</li><li class="dir"><details><summary><span class="icon">📁</span>ELOCCS</summary><ul><li class="file"><span class="icon">📁</span>CFP Vouchers receipts</li></ul></details></li><li class="file"><span class="icon">📁</span>EPIC</li><li class="file"><span class="icon">📁</span>Executive Orders</li><li class="file"><span class="icon">📁</span>FAHRO 2019</li><li class="file"><span class="icon">📁</span>FAHRO Awards</li><li class="file"><span class="icon">📁</span>Fair Housing</li><li class="file"><span class="icon">📁</span>FDS</li><li class="dir"><details><summary><span class="icon">📁</span>FHARMI Insurance</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>2020 FHARMI Policy</summary><ul><li class="file"><span class="icon">📁</span>TSHA FHARMI 2020</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Ficticious Names</li><li class="file"><span class="icon">📁</span>Florida Housing Authorities</li><li class="file"><span class="icon">📁</span>Florida Housing Finance Corp</li><li class="file"><span class="icon">📁</span>FSA Benefit</li><li class="file"><span class="icon">📁</span>Fund Development GIVING</li><li class="file"><span class="icon">📁</span>Harrison Street Units</li><li class="file"><span class="icon">📁</span>Heart Math Meg Hogan 2018</li><li class="file"><span class="icon">📁</span>Hispanic Leadership Council</li><li class="file"><span class="icon">📁</span>HLB Continum of Care Executive Committee</li><li class="dir"><details><summary><span class="icon">📁</span>Holland Knight Records Request 2018</summary><ul><li class="file"><span class="icon">📁</span>5th Records Request 5-18</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Home Share Program</summary><ul><li class="file"><span class="icon">📁</span>Admin Business</li><li class="file"><span class="icon">📁</span>Budgeting</li><li class="file"><span class="icon">📁</span>Grant Writing info docs</li><li class="file"><span class="icon">📁</span>Marketing</li><li class="file"><span class="icon">📁</span>Personnel</li><li class="file"><span class="icon">📁</span>Prof Dev Trainings</li></ul></details></li><li class="file"><span class="icon">📁</span>Home Share- Pinellas Human Services Social Action 2016</li><li class="file"><span class="icon">📁</span>Homeless Leadership Board</li><li class="file"><span class="icon">📁</span>HUD Financial Reporting</li><li class="file"><span class="icon">📁</span>HUD Safety and Security Application</li><li class="file"><span class="icon">📁</span>Human Resources CK</li><li class="file"><span class="icon">📁</span>ICMA Retirement</li><li class="file"><span class="icon">📁</span>Inspections Oak Ridge Estates</li><li class="file"><span class="icon">📁</span>IT Robbin Admin</li><li class="file"><span class="icon">📁</span>JWB Cops n Kids FY18-19</li><li class="file"><span class="icon">📁</span>JWB Cops n Kids FY19-20</li><li class="dir"><details><summary><span class="icon">📁</span>JWB Cops n Kids FY20-21</summary><ul><li class="file"><span class="icon">📁</span>Budgeting</li><li class="file"><span class="icon">📁</span>FY20-21 Contract Admin</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>JWB Cops n Kids FY21-22</summary><ul><li class="file"><span class="icon">📁</span>Contracting</li></ul></details></li><li class="file"><span class="icon">📁</span>JWB General</li><li class="file"><span class="icon">📁</span>JWB RFA CAPITAL Improvement FY18-19</li><li class="file"><span class="icon">📁</span>Kids Children Research Data</li><li class="file"><span class="icon">📁</span>LCHC Admin  Business docs</li><li class="file"><span class="icon">📁</span>LCHC Insurance</li><li class="file"><span class="icon">📁</span>LCHC Oak Ridge CohnReznick Audits</li><li class="file"><span class="icon">📁</span>LCHC Tax Docs</li><li class="dir"><details><summary><span class="icon">📁</span>MARC Grant</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>MARC Year 1 Implementation</summary><ul><li class="file"><span class="icon">📁</span>Emails Letters</li><li class="file"><span class="icon">📁</span>Evaluations</li><li class="file"><span class="icon">📁</span>LCHC Personnel HR</li><li class="file"><span class="icon">📁</span>MARC Fiscal Management</li></ul></details></li><li class="file"><span class="icon">📁</span>MARC Year 2  Implementation FY16-17</li></ul></details></li><li class="file"><span class="icon">📁</span>MD&amp;A</li><li class="file"><span class="icon">📁</span>Mileage Reimbursement FY14-15</li><li class="dir"><details><summary><span class="icon">📁</span>More Recent Pats To DV</summary><ul><li class="file"><span class="icon">📁</span>NSP Applications</li></ul></details></li><li class="file"><span class="icon">📁</span>NAHRO Merit Award</li><li class="file"><span class="icon">📁</span>NDC Laptop Copied Files</li><li class="dir"><details><summary><span class="icon">📁</span>NDC Rental Housing Dev Finance Prof</summary><ul><li class="file"><span class="icon">📁</span>HD435 New December Class</li></ul></details></li><li class="file"><span class="icon">📁</span>Oak Ridge Budget</li><li class="file"><span class="icon">📁</span>Oak Ridge CohnReznick 2020</li><li class="file"><span class="icon">📁</span>Oak Ridge Documentation 2015</li><li class="file"><span class="icon">📁</span>Oak Ridge Documentation 2016</li><li class="file"><span class="icon">📁</span>Oak Ridge Documentation 2017</li><li class="file"><span class="icon">📁</span>Oak Ridge Documentation 2019</li><li class="file"><span class="icon">📁</span>Oak Ridge Estates Brown &amp; Brown Insurance 2019</li><li class="file"><span class="icon">📁</span>Oak Ridge Estates Cohn Resnick 2017 Audit</li><li class="file"><span class="icon">📁</span>Oak Ridge Estates CohnReznick 2020</li><li class="file"><span class="icon">📁</span>Oak Ridge Estates Documentation</li><li class="file"><span class="icon">📁</span>Oak Ridge Estates Insurance Policies 2021-22</li><li class="file"><span class="icon">📁</span>Oak Ridge Estates- Inspections</li><li class="file"><span class="icon">📁</span>Oak Ridge INSURANCE</li><li class="file"><span class="icon">📁</span>Oak Ridge Tax Return 2016</li><li class="file"><span class="icon">📁</span>Operating Subsidy 2016</li><li class="file"><span class="icon">📁</span>Operating Subsidy FY19-20</li><li class="file"><span class="icon">📁</span>Operating Subsidy FY20-21</li><li class="file"><span class="icon">📁</span>Overlay Provider Docs</li><li class="file"><span class="icon">📁</span>Pathways For Growth</li><li class="file"><span class="icon">📁</span>Patti Accountant</li><li class="file"><span class="icon">📁</span>Payables Report</li><li class="file"><span class="icon">📁</span>Payrol Run Protocol and Forms</li><li class="dir"><details><summary><span class="icon">📁</span>PCF Seniors Services 2021</summary><ul><li class="file"><span class="icon">📁</span>Year 1 Grant</li></ul></details></li><li class="file"><span class="icon">📁</span>PHAS Reports</li><li class="file"><span class="icon">📁</span>PHMI</li><li class="file"><span class="icon">📁</span>Pinellas Community Foundation 2018- Home Share</li><li class="dir"><details><summary><span class="icon">📁</span>Pinellas COunty CDBG Grant 2014-15</summary><ul><li class="file"><span class="icon">📁</span>Final Bids</li></ul></details></li><li class="file"><span class="icon">📁</span>Pinellas County Housing Authority</li><li class="dir"><details><summary><span class="icon">📁</span>PPP Paycheck Protection Program</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Valley Bank</summary><ul><li class="file"><span class="icon">📁</span>Valley PPP Documents Attached</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Preferred Policy Training Opportunties</li><li class="file"><span class="icon">📁</span>Preferred TSHA General Liability</li><li class="file"><span class="icon">📁</span>Procurement Purchasing Policy</li><li class="dir"><details><summary><span class="icon">📁</span>Public Records Policy</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Public Records Request</summary><ul><li class="file"><span class="icon">📁</span>Open The Books Public Records requests</li><li class="file"><span class="icon">📁</span>Public Housing Justice Association, LLC</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>RAD II</li><li class="file"><span class="icon">📁</span>Real Estate Ventures- LCHC</li><li class="file"><span class="icon">📁</span>Reina Fire Damage 724B Mango 2017</li><li class="file"><span class="icon">📁</span>Repositioning PH</li><li class="file"><span class="icon">📁</span>Resident</li><li class="file"><span class="icon">📁</span>Resident Grievance</li><li class="file"><span class="icon">📁</span>Resolutions</li><li class="dir"><details><summary><span class="icon">📁</span>Robert Half Temp Staff</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>Robert Half Administration</summary><ul><li class="file"><span class="icon">📁</span>Robert Half Billing</li></ul></details></li></ul></details></li><li class="file"><span class="icon">📁</span>Sarasota HA</li><li class="file"><span class="icon">📁</span>Sergio- Barton Gonzalez &amp; Myers</li><li class="file"><span class="icon">📁</span>Small Housing Authority</li><li class="file"><span class="icon">📁</span>St. Pete Social Action Grant 2017-18</li><li class="dir"><details><summary><span class="icon">📁</span>St. Petersburg Social Action June 2016</summary><ul><li class="file"><span class="icon">📁</span>Submitted Proposal Documents</li></ul></details></li><li class="file"><span class="icon">📁</span>Tarpon Springs Police Department</li><li class="file"><span class="icon">📁</span>TASC FSA Card</li><li class="dir"><details><summary><span class="icon">📁</span>TD BANK</summary><ul><li class="file"><span class="icon">📁</span>OnBoarding Docs</li><li class="file"><span class="icon">📁</span>TD Bank Statements</li></ul></details></li><li class="file"><span class="icon">📁</span>The Villages at Tarpon Insurance 2018</li><li class="file"><span class="icon">📁</span>The Villages Budgets</li><li class="file"><span class="icon">📁</span>The Villages of Tarpon general</li><li class="file"><span class="icon">📁</span>The Villages Pinellas County HOME grant</li><li class="file"><span class="icon">📁</span>The Villages REAC Inspections</li><li class="file"><span class="icon">📁</span>The Villages Tax Info</li><li class="file"><span class="icon">📁</span>The Villages Wells Fargo Bank Account</li><li class="file"><span class="icon">📁</span>Trauma Sensitive Research</li><li class="file"><span class="icon">📁</span>TSHA  LCHC Board of Directors</li><li class="file"><span class="icon">📁</span>TSHA and LCHC BOARD Meetings</li><li class="file"><span class="icon">📁</span>TSHA and LCHC Ownership Liabilities</li><li class="dir"><details><summary><span class="icon">📁</span>TSHA Financials</summary><ul><li class="file"><span class="icon">📁</span>TSHA Financials 2019</li><li class="dir"><details><summary><span class="icon">📁</span>TSHA Financials 2020-21</summary><ul><li class="file"><span class="icon">📁</span>Agency and Program Allocations</li><li class="dir"><details><summary><span class="icon">📁</span>Budget Amendment FY19-20 and New FY20-21</summary><ul><li class="file"><span class="icon">📁</span>New FY20-21 Budget info</li></ul></details></li><li class="file"><span class="icon">📁</span>TSHA and LCHC FY21 Monthly Financials April 20-March21</li></ul></details></li><li class="file"><span class="icon">📁</span>TSHA Financials 2021-22</li></ul></details></li><li class="file"><span class="icon">📁</span>TSHA Growth and Sustainability</li><li class="file"><span class="icon">📁</span>TSHA LCHC Agency Documentation</li><li class="file"><span class="icon">📁</span>TSHA LCHC Insurance Policy Information 2016</li><li class="file"><span class="icon">📁</span>TSHA LCHC Personnel 2015</li><li class="file"><span class="icon">📁</span>TSHA Personnel 2016</li><li class="file"><span class="icon">📁</span>TSHA Personnel 2017</li><li class="dir"><details><summary><span class="icon">📁</span>TSHA Personnel 2018</summary><ul><li class="dir"><details><summary><span class="icon">📁</span>ED Performance Review 2018</summary><ul><li class="file"><span class="icon">📁</span>ED Training  Prof Dev 2018</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Performance Reviews 2019</summary><ul><li class="file"><span class="icon">📁</span>Janeen</li></ul></details></li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>TSHA Personnel 2019</summary><ul><li class="file"><span class="icon">📁</span>Cops n Kids Personnel</li><li class="file"><span class="icon">📁</span>Personnel Admin</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>TSHA Personnel 2020</summary><ul><li class="file"><span class="icon">📁</span>2020 Performance Reviews</li><li class="file"><span class="icon">📁</span>Cameron Burris</li><li class="file"><span class="icon">📁</span>Personnel Critical Issues</li><li class="file"><span class="icon">📁</span>Terminations Separations</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>TSHA Personnel 2021</summary><ul><li class="file"><span class="icon">📁</span>2021 Performance Reviews</li></ul></details></li><li class="file"><span class="icon">📁</span>TSHA Personnel Policy</li><li class="dir"><details><summary><span class="icon">📁</span>Villages of Tarpon</summary><ul><li class="file"><span class="icon">📁</span>Accolade Management</li><li class="file"><span class="icon">📁</span>Brown &amp; Brown Insurance</li><li class="file"><span class="icon">📁</span>Financials 2018</li></ul></details></li><li class="file"><span class="icon">📁</span>Villages Photos</li></ul></details></li><li class="dir"><details><summary><span class="icon">📁</span>Old files from Pat's Lap tops</summary><ul><li class="file"><span class="icon">📁</span>NSP Applications</li></ul></details></li><li class="file"><span class="icon">📁</span>TSHA</li></ul></details></li></ul></details></li></ul></details></li>
-</ul>
-</main>
+<div class="wrap">
+<div class="legend">
+<button class="btn" id="expand-all">Expand all</button>
+<button class="btn" id="collapse-all">Collapse all</button>
+<span>Rooted at: <strong>Dropbox</strong></span>
+</div>
+<div class="card" id="tree"><details class="node depth-0"><summary>August 2019 Go to Cloud Robbin Home</summary>
+<ul>
+<li class="leaf">2017 Dell Laptop Acronis Back Up download 11-2020</li>
+<details class="node depth-1"><summary>A Robbin Pictures</summary>
+<ul>
+<details class="node depth-2"><summary>Abu Pictures</summary>
+<ul>
+<li class="leaf">Diangy Hawaii Photos 2018</li>
+</ul></details>
+<details class="node depth-2"><summary>Archived Photos Symmetric back up 1</summary>
+<ul>
+<details class="node depth-3"><summary>Acronis Pictures 12.3.20</summary>
+<ul>
+<details class="node depth-4"><summary>Pictures</summary>
+<ul>
+<li class="leaf">Cops n Kids 2014-15</li>
+<li class="leaf">Peace4Tarpon 2015</li>
+<li class="leaf">Sotelo Family 2015</li>
+<li class="leaf">Sotelo Family 2016 July August</li>
+<li class="leaf">Sotelo Family Dec 2014</li>
+<li class="leaf">Walgreens Orders</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Cops n Kids 2014-15</li>
+<li class="leaf">Sotelo Family 2015</li>
+<li class="leaf">Sotelo Family Dec 2014</li>
+</ul></details>
+<details class="node depth-2"><summary>Back Up Silver Flash Drive 2009</summary>
+<ul>
+<details class="node depth-3"><summary>USB Drive</summary>
+<ul>
+<details class="node depth-4"><summary>CCC</summary>
+<ul>
+<li class="leaf">RFP</li>
+</ul></details>
+<details class="node depth-4"><summary>MSASS</summary>
+<ul>
+<details class="node depth-5"><summary>MSASS 2007</summary>
+<ul>
+<li class="leaf">YWDP 2008</li>
+</ul></details>
+</ul></details>
+<details class="node depth-4"><summary>Old Laptop 2000 Archived</summary>
+<ul>
+<details class="node depth-5"><summary>PhotoShow Print &amp; Share Childhood</summary>
+<ul>
+<li class="leaf">2009</li>
+</ul></details>
+<li class="leaf">QuickenDocs</li>
+<details class="node depth-5"><summary>Robbin Old Stuff</summary>
+<ul>
+<li class="leaf">BACB_files</li>
+<li class="leaf">BACBTaskList_files</li>
+<li class="leaf">Financial</li>
+</ul></details>
+</ul></details>
+<details class="node depth-4"><summary>Old Laptop Back Up 2013</summary>
+<ul>
+<details class="node depth-5"><summary>Archived</summary>
+<ul>
+<li class="leaf">ArchivedAK</li>
+</ul></details>
+</ul></details>
+<li class="leaf">OST</li>
+<details class="node depth-4"><summary>Pictures to store</summary>
+<ul>
+<details class="node depth-5"><summary>Baby 2009</summary>
+<ul>
+<li class="leaf">Baby 2009</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Robbin and Fred First Year 2009</li>
+<li class="leaf">Robbin's</li>
+<li class="leaf">Tarpon Springs Housing Authority</li>
+<li class="leaf">TSHA</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Cole's Birthday Brady Kerri Tracy</li>
+<details class="node depth-2"><summary>Cops n Kids Pictures</summary>
+<ul>
+<li class="leaf">Cops n Kids 2014-15</li>
+<details class="node depth-3"><summary>Cops n Kids 2018</summary>
+<ul>
+<details class="node depth-4"><summary>Dec 10</summary>
+<ul>
+<li class="leaf">100NCD40</li>
+</ul></details>
+</ul></details>
+<details class="node depth-3"><summary>Walgreens Cops n Kids</summary>
+<ul>
+<li class="leaf">Photo Albums</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Marlena Baby Shower 10-2009</li>
+<details class="node depth-2"><summary>Orignal Walgreens BackUp</summary>
+<ul>
+<li class="leaf">2009 Walgreens Back Up</li>
+<li class="leaf">2010 Walgreens Back Up</li>
+<details class="node depth-3"><summary>2011 Walgreens Back Up</summary>
+<ul>
+<li class="leaf">Elijah June 2011 Birth</li>
+<li class="leaf">Fall 2011</li>
+<li class="leaf">Summer 2011</li>
+</ul></details>
+<details class="node depth-3"><summary>2012 Walgreens Back Up</summary>
+<ul>
+<li class="leaf">December 2012</li>
+<li class="leaf">Fall 2012</li>
+</ul></details>
+<details class="node depth-3"><summary>2013 Walgreens Back Up</summary>
+<ul>
+<li class="leaf">April 2013</li>
+<li class="leaf">December 2013</li>
+<li class="leaf">November 2013</li>
+<li class="leaf">September 2013</li>
+</ul></details>
+<li class="leaf">2014 Walgreens Back Up</li>
+<li class="leaf">Puerto Rico Marlena Birthday Christmas 2011</li>
+</ul></details>
+<details class="node depth-2"><summary>Robbin Photos 2019</summary>
+<ul>
+<li class="leaf">Belize June 2019</li>
+</ul></details>
+<details class="node depth-2"><summary>Robbin Photos 2020</summary>
+<ul>
+<li class="leaf">Walgreens Orders</li>
+</ul></details>
+<details class="node depth-2"><summary>Robbin Photos 2021</summary>
+<ul>
+<details class="node depth-3"><summary>Sawubona</summary>
+<ul>
+<li class="leaf">April 2021</li>
+<li class="leaf">March 2019</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Solelo Family 2019</li>
+<li class="leaf">Sotelo Family 2015</li>
+<details class="node depth-2"><summary>Sotelo Family 2018</summary>
+<ul>
+<li class="leaf">June 2018</li>
+<details class="node depth-3"><summary>March April May 2018</summary>
+<ul>
+<details class="node depth-4"><summary>Colorado 2018</summary>
+<ul>
+<li class="leaf">Extras</li>
+</ul></details>
+</ul></details>
+<li class="leaf">November 2018</li>
+</ul></details>
+<li class="leaf">Sotelo Family Dec 2014</li>
+<details class="node depth-2"><summary>Sotelo Pictures 2016</summary>
+<ul>
+<li class="leaf">Sotelo Family 2016 July August</li>
+</ul></details>
+<details class="node depth-2"><summary>Sotelo Pictures 2017</summary>
+<ul>
+<li class="leaf">Sotelo Family December 2017</li>
+<li class="leaf">Sotelo Family June 2017</li>
+<li class="leaf">Sotelo Family October-December 2017</li>
+<li class="leaf">Sotelo Summer July August 2017</li>
+</ul></details>
+<li class="leaf">Videos 2018 Download</li>
+<details class="node depth-2"><summary>Walgreens Orders</summary>
+<ul>
+<details class="node depth-3"><summary>April May 2018</summary>
+<ul>
+<li class="leaf">April 2018</li>
+</ul></details>
+<li class="leaf">December 2016 Walgreens</li>
+<li class="leaf">June Walgreens 2017</li>
+</ul></details>
+</ul></details>
+<details class="node depth-1"><summary>August Go to Cloud 2015</summary>
+<ul>
+<li class="leaf">Cops n Kids Financials FY2014-15</li>
+<li class="leaf">Cops n Kids FY15-16</li>
+<li class="leaf">DJJ Prevention Diversion Grant FY2014-15</li>
+<li class="leaf">Hispanic Leadership Council</li>
+<li class="leaf">Human Resources CK</li>
+<li class="leaf">MARC Grant</li>
+<li class="leaf">Overlay Provider Docs</li>
+<details class="node depth-2"><summary>Pinellas COunty CDBG Grant 2014-15</summary>
+<ul>
+<li class="leaf">Final Bids</li>
+</ul></details>
+<li class="leaf">Robbin</li>
+<li class="leaf">TSHA LCHC Agency Documentation 2014-15</li>
+</ul></details>
+<details class="node depth-1"><summary>Backup_June_25_2014</summary>
+<ul>
+<details class="node depth-2"><summary>Documents</summary>
+<ul>
+<details class="node depth-3"><summary>Documents</summary>
+<ul>
+<details class="node depth-4"><summary>Backup Files</summary>
+<ul>
+<details class="node depth-5"><summary>Robbin's Docs</summary>
+<ul>
+<li class="leaf">CCC</li>
+<details class="node depth-6"><summary>Employment</summary>
+<ul>
+<li class="leaf">TSHA Spring 2011</li>
+</ul></details>
+</ul></details>
+</ul></details>
+<li class="leaf">DocuVantage</li>
+<li class="leaf">Fred's</li>
+<details class="node depth-4"><summary>Housing Authority</summary>
+<ul>
+<li class="leaf">Adminstration</li>
+<li class="leaf">Board</li>
+<li class="leaf">Conferences</li>
+<details class="node depth-5"><summary>Human Resources</summary>
+<ul>
+<li class="leaf">Performance Reviews</li>
+<li class="leaf">Personnel Admin</li>
+<li class="leaf">Timesheets and Holidays</li>
+</ul></details>
+<details class="node depth-5"><summary>Trainings</summary>
+<ul>
+<li class="leaf">Registration Receipts</li>
+</ul></details>
+<li class="leaf">Trips out of town</li>
+</ul></details>
+<details class="node depth-4"><summary>JWB</summary>
+<ul>
+<li class="leaf">ED Steering Committee</li>
+</ul></details>
+<details class="node depth-4"><summary>Peace4Tarpon</summary>
+<ul>
+<details class="node depth-5"><summary>Community Action Committee</summary>
+<ul>
+<li class="leaf">Trainings</li>
+</ul></details>
+<details class="node depth-5"><summary>Grant Writing</summary>
+<ul>
+<li class="leaf">Allegheny Major Grants</li>
+<li class="leaf">New folder</li>
+</ul></details>
+<li class="leaf">Peace4Tarpon Administration</li>
+<li class="leaf">Research for Childrens Initiative</li>
+<li class="leaf">Social Marketing Committee</li>
+</ul></details>
+<details class="node depth-4"><summary>Personal Robbin's</summary>
+<ul>
+<li class="leaf">Abu stuff</li>
+<details class="node depth-5"><summary>Finances</summary>
+<ul>
+<li class="leaf">New folder</li>
+</ul></details>
+<li class="leaf">Health</li>
+<li class="leaf">House Projects</li>
+<li class="leaf">Marlena and Elijah</li>
+<details class="node depth-5"><summary>My Journey</summary>
+<ul>
+<li class="leaf">Receipts</li>
+</ul></details>
+<details class="node depth-5"><summary>UT NonProfit Leadership</summary>
+<ul>
+<li class="leaf">Metropolitan Ministries</li>
+<details class="node depth-6"><summary>UT Strategic Mgt- Course 1</summary>
+<ul>
+<li class="leaf">Governance</li>
+</ul></details>
+</ul></details>
+</ul></details>
+<li class="leaf">Quicken</li>
+</ul></details>
+</ul></details>
+</ul></details>
+<details class="node depth-1"><summary>Robbin</summary>
+<ul>
+<details class="node depth-2"><summary>529 Plans 6-2018</summary>
+<ul>
+<li class="leaf">Elijah 529 Plan</li>
+</ul></details>
+<li class="leaf">Alonso High School</li>
+<li class="leaf">Car Insurance</li>
+<details class="node depth-2"><summary>Dad</summary>
+<ul>
+<details class="node depth-3"><summary>Charlotte home</summary>
+<ul>
+<li class="leaf">Property Insurance</li>
+</ul></details>
+<li class="leaf">St. Charlotte House</li>
+</ul></details>
+<details class="node depth-2"><summary>ED Performance Review 2018</summary>
+<ul>
+<li class="leaf">ED Training  Prof Dev 2018</li>
+</ul></details>
+<details class="node depth-2"><summary>Elijah</summary>
+<ul>
+<li class="leaf">7th grade Walker</li>
+<li class="leaf">8th Grade Walker</li>
+<li class="leaf">BASEBALL</li>
+<li class="leaf">Elijah PSY</li>
+<details class="node depth-3"><summary>Elijah School Admin</summary>
+<ul>
+<li class="leaf">BAND</li>
+<li class="leaf">Mrs. Childs Grade 3</li>
+</ul></details>
+<details class="node depth-3"><summary>Elijah WALKER 6th Grade</summary>
+<ul>
+<details class="node depth-4"><summary>History- Shelton</summary>
+<ul>
+<li class="leaf">December 22</li>
+</ul></details>
+<li class="leaf">Walker Admin</li>
+</ul></details>
+<details class="node depth-3"><summary>Elijah-- Linda Mood Bell</summary>
+<ul>
+<li class="leaf">Bay Academic Supports</li>
+</ul></details>
+<li class="leaf">Home work</li>
+<li class="leaf">Sports</li>
+<li class="leaf">Summer Camp</li>
+</ul></details>
+<li class="leaf">Entertainment</li>
+<details class="node depth-2"><summary>Family</summary>
+<ul>
+<li class="leaf">Sotelo Family Admin</li>
+<details class="node depth-3"><summary>Sotelo Larkin Documents</summary>
+<ul>
+<li class="leaf">Copies of Financial docs February</li>
+<li class="leaf">Court Documents</li>
+</ul></details>
+<li class="leaf">Summer Camp 2019</li>
+</ul></details>
+<details class="node depth-2"><summary>Fiscal Management</summary>
+<ul>
+<li class="leaf">Raymond James</li>
+<li class="leaf">Robbin Budgets</li>
+<details class="node depth-3"><summary>Suncoast Credit Union</summary>
+<ul>
+<li class="leaf">Bank Statements</li>
+</ul></details>
+<details class="node depth-3"><summary>Taxes</summary>
+<ul>
+<li class="leaf">2024 Tax documents</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Fountainhead Townhouse</li>
+<li class="leaf">General Admin</li>
+<details class="node depth-2"><summary>Hayfield Way</summary>
+<ul>
+<li class="leaf">TECO</li>
+<li class="leaf">Water</li>
+</ul></details>
+<li class="leaf">ICMA 401K Account</li>
+<details class="node depth-2"><summary>Kids Enrichments</summary>
+<ul>
+<li class="leaf">Basketball</li>
+</ul></details>
+<li class="leaf">Lake House</li>
+<details class="node depth-2"><summary>Legal</summary>
+<ul>
+<li class="leaf">Amber Boles</li>
+</ul></details>
+<details class="node depth-2"><summary>Letters</summary>
+<ul>
+<details class="node depth-3"><summary>Thoughts</summary>
+<ul>
+<details class="node depth-4"><summary>Financial Affidavit</summary>
+<ul>
+<li class="leaf">Copy of Expenses Assets Liabilities</li>
+<li class="leaf">Copy of Expenses Assets Liabilities - Copy 1</li>
+</ul></details>
+<li class="leaf">Larkin FIle</li>
+</ul></details>
+</ul></details>
+<details class="node depth-2"><summary>Marlena</summary>
+<ul>
+<details class="node depth-3"><summary>4th grade</summary>
+<ul>
+<li class="leaf">Online Learning Classwork April 20</li>
+</ul></details>
+<li class="leaf">5th Grade Ms. Andux</li>
+<li class="leaf">7TH GRADE Walker Marlena</li>
+<li class="leaf">8th Grade</li>
+<li class="leaf">8th Grade Walker</li>
+<details class="node depth-3"><summary>Alonso High</summary>
+<ul>
+<li class="leaf">9 th Grade</li>
+</ul></details>
+<li class="leaf">Girl Scouts</li>
+<li class="leaf">Marlena admin</li>
+<li class="leaf">School Documentation Grade 5</li>
+<li class="leaf">SICKLES HIGH</li>
+<details class="node depth-3"><summary>WALKER Middle 6th Grade</summary>
+<ul>
+<details class="node depth-4"><summary>Marlena 6th Grade</summary>
+<ul>
+<li class="leaf">HISTORY Class Ms. Shelton</li>
+<li class="leaf">PE Course Ms. Gaberino</li>
+<li class="leaf">Period 1 MATH Mr. Stoll</li>
+<li class="leaf">Period 6 ELA Stephens and Seanoa</li>
+<li class="leaf">READING Class ms. Lowe</li>
+<li class="leaf">SCIENCEClass Ms. Smith</li>
+<details class="node depth-5"><summary>Walker Admin</summary>
+<ul>
+<li class="leaf">Report Cards  2021-22</li>
+</ul></details>
+</ul></details>
+</ul></details>
+</ul></details>
+<details class="node depth-2"><summary>Medical</summary>
+<ul>
+<li class="leaf">Dad Richard</li>
+<details class="node depth-3"><summary>Kids Medical</summary>
+<ul>
+<details class="node depth-4"><summary>CIGNA</summary>
+<ul>
+<li class="leaf">Claim Form</li>
+</ul></details>
+<details class="node depth-4"><summary>Elijah Medical</summary>
+<ul>
+<li class="leaf">PSY Elijah</li>
+</ul></details>
+<details class="node depth-4"><summary>Marlena Medical</summary>
+<ul>
+<li class="leaf">Audiology</li>
+<li class="leaf">Dr Gharavi Psychiatry</li>
+<details class="node depth-5"><summary>Marlena PSY</summary>
+<ul>
+<li class="leaf">Meghan-   Kinsler Psy</li>
+</ul></details>
+</ul></details>
+</ul></details>
+<li class="leaf">Robbin insurance Info</li>
+<details class="node depth-3"><summary>Robbin Medical</summary>
+<ul>
+<details class="node depth-4"><summary>Spectra and other Aug 23</summary>
+<ul>
+<li class="leaf">Lab Test Results</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Robbin MH</li>
+<li class="leaf">Robbin TASC Card receipts</li>
+</ul></details>
+<li class="leaf">Mindfullness</li>
+<details class="node depth-2"><summary>OUR FAMILY WIZARD</summary>
+<ul>
+<details class="node depth-3"><summary>Finances</summary>
+<ul>
+<li class="leaf">OFW Admin</li>
+<details class="node depth-4"><summary>School Expenses</summary>
+<ul>
+<li class="leaf">2021 Lake Mag</li>
+</ul></details>
+</ul></details>
+<li class="leaf">OFW Calendar</li>
+<details class="node depth-3"><summary>OFW Receipts</summary>
+<ul>
+<li class="leaf">Walker School Receipts</li>
+</ul></details>
+</ul></details>
+<details class="node depth-2"><summary>Professional Dev</summary>
+<ul>
+<li class="leaf">Bradenton HA</li>
+<li class="leaf">Travel Prof Dev</li>
+<details class="node depth-3"><summary>TSHA Robbin</summary>
+<ul>
+<details class="node depth-4"><summary>Incident Reporting March 2025</summary>
+<ul>
+<li class="leaf">Derek</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Visioning Board</li>
+</ul></details>
+<details class="node depth-2"><summary>Robbin Admin</summary>
+<ul>
+<details class="node depth-3"><summary>New folder</summary>
+<ul>
+<li class="leaf">Life Admin</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Sawubona</li>
+<details class="node depth-2"><summary>Schools</summary>
+<ul>
+<li class="leaf">FL Charter School docs</li>
+<li class="leaf">Kids School Admin</li>
+</ul></details>
+<details class="node depth-2"><summary>Summer Camp</summary>
+<ul>
+<li class="leaf">Camps Enrichment 2021</li>
+<li class="leaf">SUMMER CAMPS 2022</li>
+</ul></details>
+<details class="node depth-2"><summary>Taxes</summary>
+<ul>
+<li class="leaf">TAXES 2021</li>
+</ul></details>
+<li class="leaf">Taxes 2019 Forward</li>
+<li class="leaf">Vacation</li>
+<details class="node depth-2"><summary>Will &amp; Trust Robert Hines-  Robbin</summary>
+<ul>
+<li class="leaf">Attorney Robert Hines admin</li>
+</ul></details>
+</ul></details>
+<details class="node depth-1"><summary>Robbin Misc back up TSHA docs</summary>
+<ul>
+<li class="leaf">Stubs</li>
+</ul></details>
+<details class="node depth-1"><summary>September 2015 Go to Cloud</summary>
+<ul>
+<details class="node depth-2"><summary>October 2015 Go to Cloud</summary>
+<ul>
+<li class="leaf">Cops 'n Kids JWB Documentation FY15-16</li>
+<li class="leaf">Cops n Kids Financials FY2014-15</li>
+<li class="leaf">Cops n Kids Financials FY2015-16</li>
+<li class="leaf">Cops n Kids FY15-16</li>
+<li class="leaf">Cops n Kids Human Resources- Personnel</li>
+<li class="leaf">DJJ Prevention Diversion Grant FY2014-15</li>
+<li class="leaf">Hispanic Leadership Council</li>
+<li class="leaf">Human Resources CK</li>
+<li class="leaf">JWB General</li>
+<details class="node depth-3"><summary>MARC Grant</summary>
+<ul>
+<details class="node depth-4"><summary>MARC Year 1 Implementation</summary>
+<ul>
+<li class="leaf">Evaluations</li>
+<li class="leaf">LCHC Personnel HR</li>
+<li class="leaf">MARC Fiscal Management</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Overlay Provider Docs</li>
+<details class="node depth-3"><summary>Pinellas COunty CDBG Grant 2014-15</summary>
+<ul>
+<li class="leaf">Final Bids</li>
+</ul></details>
+<li class="leaf">Robbin</li>
+<li class="leaf">TSHA LCHC Agency Documentation 2014-15</li>
+<li class="leaf">TSHA LCHC Personnel 2015</li>
+</ul></details>
+</ul></details>
+</ul></details><details class="node depth-0"><summary>October 2015--July 2019 Go To Cloud</summary>
+<ul>
+<li class="leaf">718-720 North Avenue</li>
+<details class="node depth-1"><summary>A Robbin Pictures</summary>
+<ul>
+<details class="node depth-2"><summary>Abu Pictures</summary>
+<ul>
+<li class="leaf">Diangy Hawaii Photos 2018</li>
+</ul></details>
+<details class="node depth-2"><summary>Cops n Kids Pictures</summary>
+<ul>
+<li class="leaf">Cops n Kids 2014-15</li>
+<details class="node depth-3"><summary>Cops n Kids 2018</summary>
+<ul>
+<details class="node depth-4"><summary>Dec 10</summary>
+<ul>
+<li class="leaf">100NCD40</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Peace4Tarpon 2015</li>
+<details class="node depth-3"><summary>Walgreens Cops n Kids</summary>
+<ul>
+<li class="leaf">Photo Albums</li>
+</ul></details>
+</ul></details>
+<details class="node depth-2"><summary>Solelo Family 2019</summary>
+<ul>
+<li class="leaf">Rick Camera June 19</li>
+</ul></details>
+<li class="leaf">Sotelo Family 2015</li>
+<details class="node depth-2"><summary>Sotelo Family 2018</summary>
+<ul>
+<li class="leaf">June 2018</li>
+<details class="node depth-3"><summary>March April May 2018</summary>
+<ul>
+<details class="node depth-4"><summary>Colorado 2018</summary>
+<ul>
+<li class="leaf">Extras</li>
+</ul></details>
+</ul></details>
+<li class="leaf">November 2018</li>
+</ul></details>
+<li class="leaf">Sotelo Family Dec 2014</li>
+<details class="node depth-2"><summary>Sotelo Pictures 2016</summary>
+<ul>
+<li class="leaf">Sotelo Family 2016 July August</li>
+</ul></details>
+<details class="node depth-2"><summary>Sotelo Pictures 2017</summary>
+<ul>
+<li class="leaf">Sotelo Family December 2017</li>
+<li class="leaf">Sotelo Family June 2017</li>
+<li class="leaf">Sotelo Family October-December 2017</li>
+<li class="leaf">Sotelo Summer July August 2017</li>
+</ul></details>
+<li class="leaf">Videos 2018 Download</li>
+<details class="node depth-2"><summary>Walgreens Orders</summary>
+<ul>
+<details class="node depth-3"><summary>April May 2018</summary>
+<ul>
+<li class="leaf">April 2018</li>
+</ul></details>
+<li class="leaf">December 2016 Walgreens</li>
+<li class="leaf">June Walgreens 2017</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Accolade Eagle Ridge Reports</li>
+<li class="leaf">Accolade Oak Ridge Reports</li>
+<li class="leaf">Accolade Property Management</li>
+<li class="leaf">Accolade The Villages Reports</li>
+<details class="node depth-1"><summary>Accounting Department</summary>
+<ul>
+<li class="leaf">Accounting Operating Policies and Procedures</li>
+<li class="leaf">Audit Preparation</li>
+<li class="leaf">Daily Accounting Management</li>
+<li class="leaf">Persoonnel Job Descriptions</li>
+<li class="leaf">Year End</li>
+</ul></details>
+<details class="node depth-1"><summary>Annual Plan 2020</summary>
+<ul>
+<li class="leaf">2020 TSHA 5 Year Agency Plan</li>
+</ul></details>
+<details class="node depth-1"><summary>AON Cyber Insurance</summary>
+<ul>
+<li class="leaf">AON Cyber 2020</li>
+</ul></details>
+<details class="node depth-1"><summary>Audits TSHA and LCHC</summary>
+<ul>
+<li class="leaf">Audited FDS</li>
+</ul></details>
+<li class="leaf">Bank of America</li>
+<details class="node depth-1"><summary>Bank of America Cash Pro Module</summary>
+<ul>
+<li class="leaf">BoA Bank LCHC Bank Statements</li>
+</ul></details>
+<li class="leaf">Bid- Rapid Rehousing HLB</li>
+<li class="leaf">Brown and Brown</li>
+<li class="leaf">CDBG Clearwater 2020</li>
+<li class="leaf">CDBG Pinellas 2021</li>
+<details class="node depth-1"><summary>CDBG- Cops n Kids 2016</summary>
+<ul>
+<li class="leaf">CDBG Documentation 2018</li>
+</ul></details>
+<li class="leaf">CDBG- Homeshare 2016</li>
+<details class="node depth-1"><summary>CFP 2016 Submission</summary>
+<ul>
+<li class="leaf">CFP HUD 50075.1 FY2008-2014</li>
+</ul></details>
+<details class="node depth-1"><summary>CFP 2017 Capital Fund January 2021</summary>
+<ul>
+<li class="leaf">CFP 2017 Contract Docs</li>
+</ul></details>
+<li class="leaf">CFP 2020</li>
+<li class="leaf">CFP 2021</li>
+<li class="leaf">CFP Capital Fund general</li>
+<li class="leaf">CFP EPIC</li>
+<li class="leaf">CHAP Award Info 2020</li>
+<li class="leaf">City of Tarpon Springs</li>
+<li class="leaf">Cohn Reznick Oak Ridge 2021</li>
+<li class="leaf">CohnReznick Oak Ridge 2019</li>
+<li class="leaf">CohnReznick The Villages 2020</li>
+<li class="leaf">Collaterializing Accounts</li>
+<li class="leaf">Contracting</li>
+<li class="leaf">COOP</li>
+<li class="leaf">Cops 'n Kids Financials JWB FY19-20</li>
+<details class="node depth-1"><summary>Cops 'n Kids Financials JWB FY20-21</summary>
+<ul>
+<li class="leaf">FY20-21 JWB Cops n Kids Budget</li>
+</ul></details>
+<li class="leaf">Cops 'n Kids Financials JWB FY21-22</li>
+<li class="leaf">Cops 'n Kids General</li>
+<li class="leaf">Cops 'n Kids JWB Documentation FY15-16</li>
+<li class="leaf">Cops 'n Kids Overlay Providers</li>
+<li class="leaf">Cops n Kids 2017-18</li>
+<li class="leaf">Cops n Kids Facility Buildings</li>
+<li class="leaf">Cops n Kids Financials FY16-17</li>
+<li class="leaf">Cops n Kids Financials FY2014-15</li>
+<li class="leaf">Cops n Kids Financials FY2015-16</li>
+<li class="leaf">Cops n Kids Financials FY2018-19</li>
+<li class="leaf">Cops n Kids FY15-16</li>
+<details class="node depth-1"><summary>Cops n Kids Human Resources- Personnel</summary>
+<ul>
+<li class="leaf">Job Descriptions CK personnel</li>
+<li class="leaf">Performance Appraisals FY15-16</li>
+</ul></details>
+<li class="leaf">Cops n Kids JWB 2017-18</li>
+<li class="leaf">Cops n Kids JWB FY2018-19</li>
+<li class="leaf">Cops n Kids Marketing</li>
+<li class="leaf">Cops n Kids Parenting</li>
+<details class="node depth-1"><summary>COVID-19 CORONA Virus Response 2020</summary>
+<ul>
+<details class="node depth-2"><summary>Personnel COVID</summary>
+<ul>
+<li class="leaf">PPP FEMA</li>
+</ul></details>
+</ul></details>
+<li class="leaf">CRV Debbie Williams</li>
+<li class="leaf">CVR Financial Advisor</li>
+<details class="node depth-1"><summary>Cyber Insurance</summary>
+<ul>
+<li class="leaf">Cyber Liability Insur AON 2018</li>
+</ul></details>
+<details class="node depth-1"><summary>DJJ 10466 Back Up April 2017</summary>
+<ul>
+<details class="node depth-2"><summary>DJJ 10466 Feb 28 Zipped</summary>
+<ul>
+<details class="node depth-3"><summary>New folder</summary>
+<ul>
+<li class="leaf">DJJ RFP 10466</li>
+</ul></details>
+</ul></details>
+<details class="node depth-2"><summary>DJJ 10466 FINAL Zipped RFP 3-1-17</summary>
+<ul>
+<li class="leaf">DJJ RFP 10466</li>
+</ul></details>
+<li class="leaf">DJJ RFP 10466</li>
+<details class="node depth-2"><summary>DJJ RFP 10466 Zipped 2-23-17</summary>
+<ul>
+<li class="leaf">DJJ RFP 10466</li>
+</ul></details>
+<details class="node depth-2"><summary>DJJ RFP 10466 Zipped Feb 22</summary>
+<ul>
+<li class="leaf">DJJ RFP 10466</li>
+</ul></details>
+<details class="node depth-2"><summary>DJJ Zipped 10466</summary>
+<ul>
+<li class="leaf">DJJ RFP 10466</li>
+</ul></details>
+</ul></details>
+<li class="leaf">DJJ Contract 10408 Year 2</li>
+<li class="leaf">DJJ Contract 10408 Year 3</li>
+<li class="leaf">DJJ Invest in Children Program #10408</li>
+<details class="node depth-1"><summary>DJJ Prevention Diversion Grant FY2014-15</summary>
+<ul>
+<li class="leaf">2nd Year DJJ Contract Renewal July 2015</li>
+</ul></details>
+<details class="node depth-1"><summary>DJJ Program 3 Contract for 10466</summary>
+<ul>
+<li class="leaf">Year 1 DJJ Program 3</li>
+<li class="leaf">Year 2 Contract 10536</li>
+<details class="node depth-2"><summary>Year 3 Contract 10536</summary>
+<ul>
+<li class="leaf">Budget Fiscal Mgt</li>
+</ul></details>
+</ul></details>
+<details class="node depth-1"><summary>DJJ RFP 10630 Program 4</summary>
+<ul>
+<details class="node depth-2"><summary>Solicitation RFP 10630 Original PDF forms February</summary>
+<ul>
+<li class="leaf">Final RFP Bid Library Documents</li>
+<li class="leaf">Forms 10630</li>
+</ul></details>
+<details class="node depth-2"><summary>YEAR 1 Contract 10660</summary>
+<ul>
+<details class="node depth-3"><summary>Year 1 Contracting</summary>
+<ul>
+<li class="leaf">Curriculum</li>
+<li class="leaf">Fiscal Management</li>
+<details class="node depth-4"><summary>FORMS 10660-  Mnthly Quartly Annually</summary>
+<ul>
+<li class="leaf">DJJ 4 Forms</li>
+</ul></details>
+<details class="node depth-4"><summary>Job Descriptions</summary>
+<ul>
+<li class="leaf">RESUMES</li>
+</ul></details>
+<li class="leaf">Year 1 Budgeting Fiscal</li>
+<li class="leaf">Year 1 COVID</li>
+<li class="leaf">Year 1 Personnel</li>
+</ul></details>
+</ul></details>
+<details class="node depth-2"><summary>Year 2 Contract 10660</summary>
+<ul>
+<li class="leaf">Year 2 October 2021 Invoicing packet</li>
+</ul></details>
+<li class="leaf">Year 3 Contract 10660</li>
+</ul></details>
+<li class="leaf">DJJ Solicitation 10344 FY16-17</li>
+<li class="leaf">DUNS Number  SAM Registration</li>
+<li class="leaf">Eagle Ridge 2021</li>
+<details class="node depth-1"><summary>Eagle Ridge Apartments</summary>
+<ul>
+<li class="leaf">FHFC meetings</li>
+</ul></details>
+<li class="leaf">Eagle Ridge Ending Phase- Stabilization</li>
+<li class="leaf">Eagle Ridge Financing Plan</li>
+<li class="leaf">Eagle Ridge General Admin</li>
+<li class="leaf">Eagle Ridge Ground Breaking</li>
+<li class="leaf">Eagle Ridge Insurance Policies</li>
+<li class="leaf">Eagle Ridge ORIGINALS</li>
+<li class="leaf">Eagle Ridge RAD CHAP 2018</li>
+<details class="node depth-1"><summary>Eagle Ridge- Relocation Plan</summary>
+<ul>
+<li class="leaf">Resident Notice Documents</li>
+</ul></details>
+<li class="leaf">ED Forum</li>
+<details class="node depth-1"><summary>ELOCCS</summary>
+<ul>
+<li class="leaf">CFP Vouchers receipts</li>
+</ul></details>
+<li class="leaf">EPIC</li>
+<li class="leaf">Executive Orders</li>
+<li class="leaf">FAHRO 2019</li>
+<li class="leaf">FAHRO Awards</li>
+<li class="leaf">Fair Housing</li>
+<li class="leaf">FDS</li>
+<details class="node depth-1"><summary>FHARMI Insurance</summary>
+<ul>
+<details class="node depth-2"><summary>2020 FHARMI Policy</summary>
+<ul>
+<li class="leaf">TSHA FHARMI 2020</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Ficticious Names</li>
+<li class="leaf">Florida Housing Authorities</li>
+<li class="leaf">Florida Housing Finance Corp</li>
+<li class="leaf">FSA Benefit</li>
+<li class="leaf">Fund Development GIVING</li>
+<li class="leaf">Harrison Street Units</li>
+<li class="leaf">Heart Math Meg Hogan 2018</li>
+<li class="leaf">Hispanic Leadership Council</li>
+<li class="leaf">HLB Continum of Care Executive Committee</li>
+<details class="node depth-1"><summary>Holland Knight Records Request 2018</summary>
+<ul>
+<li class="leaf">5th Records Request 5-18</li>
+</ul></details>
+<details class="node depth-1"><summary>Home Share Program</summary>
+<ul>
+<li class="leaf">Admin Business</li>
+<li class="leaf">Budgeting</li>
+<li class="leaf">Grant Writing info docs</li>
+<li class="leaf">Marketing</li>
+<li class="leaf">Personnel</li>
+<li class="leaf">Prof Dev Trainings</li>
+</ul></details>
+<li class="leaf">Home Share- Pinellas Human Services Social Action 2016</li>
+<li class="leaf">Homeless Leadership Board</li>
+<li class="leaf">HUD Financial Reporting</li>
+<li class="leaf">HUD Safety and Security Application</li>
+<li class="leaf">Human Resources CK</li>
+<li class="leaf">ICMA Retirement</li>
+<li class="leaf">Inspections Oak Ridge Estates</li>
+<li class="leaf">IT Robbin Admin</li>
+<li class="leaf">JWB Cops n Kids FY18-19</li>
+<li class="leaf">JWB Cops n Kids FY19-20</li>
+<details class="node depth-1"><summary>JWB Cops n Kids FY20-21</summary>
+<ul>
+<li class="leaf">Budgeting</li>
+<li class="leaf">FY20-21 Contract Admin</li>
+</ul></details>
+<details class="node depth-1"><summary>JWB Cops n Kids FY21-22</summary>
+<ul>
+<li class="leaf">Contracting</li>
+</ul></details>
+<li class="leaf">JWB General</li>
+<li class="leaf">JWB RFA CAPITAL Improvement FY18-19</li>
+<li class="leaf">Kids Children Research Data</li>
+<li class="leaf">LCHC Admin  Business docs</li>
+<li class="leaf">LCHC Insurance</li>
+<li class="leaf">LCHC Oak Ridge CohnReznick Audits</li>
+<li class="leaf">LCHC Tax Docs</li>
+<details class="node depth-1"><summary>MARC Grant</summary>
+<ul>
+<details class="node depth-2"><summary>MARC Year 1 Implementation</summary>
+<ul>
+<li class="leaf">Emails Letters</li>
+<li class="leaf">Evaluations</li>
+<li class="leaf">LCHC Personnel HR</li>
+<li class="leaf">MARC Fiscal Management</li>
+</ul></details>
+<li class="leaf">MARC Year 2  Implementation FY16-17</li>
+</ul></details>
+<li class="leaf">MD&amp;A</li>
+<li class="leaf">Mileage Reimbursement FY14-15</li>
+<details class="node depth-1"><summary>More Recent Pats To DV</summary>
+<ul>
+<li class="leaf">NSP Applications</li>
+</ul></details>
+<li class="leaf">NAHRO Merit Award</li>
+<li class="leaf">NDC Laptop Copied Files</li>
+<details class="node depth-1"><summary>NDC Rental Housing Dev Finance Prof</summary>
+<ul>
+<li class="leaf">HD435 New December Class</li>
+</ul></details>
+<li class="leaf">Oak Ridge Budget</li>
+<li class="leaf">Oak Ridge CohnReznick 2020</li>
+<li class="leaf">Oak Ridge Documentation 2015</li>
+<li class="leaf">Oak Ridge Documentation 2016</li>
+<li class="leaf">Oak Ridge Documentation 2017</li>
+<li class="leaf">Oak Ridge Documentation 2019</li>
+<li class="leaf">Oak Ridge Estates Brown &amp; Brown Insurance 2019</li>
+<li class="leaf">Oak Ridge Estates Cohn Resnick 2017 Audit</li>
+<li class="leaf">Oak Ridge Estates CohnReznick 2020</li>
+<li class="leaf">Oak Ridge Estates Documentation</li>
+<li class="leaf">Oak Ridge Estates Insurance Policies 2021-22</li>
+<li class="leaf">Oak Ridge Estates- Inspections</li>
+<li class="leaf">Oak Ridge INSURANCE</li>
+<li class="leaf">Oak Ridge Tax Return 2016</li>
+<li class="leaf">Operating Subsidy 2016</li>
+<li class="leaf">Operating Subsidy FY19-20</li>
+<li class="leaf">Operating Subsidy FY20-21</li>
+<li class="leaf">Overlay Provider Docs</li>
+<li class="leaf">Pathways For Growth</li>
+<li class="leaf">Patti Accountant</li>
+<li class="leaf">Payables Report</li>
+<li class="leaf">Payrol Run Protocol and Forms</li>
+<details class="node depth-1"><summary>PCF Seniors Services 2021</summary>
+<ul>
+<li class="leaf">Year 1 Grant</li>
+</ul></details>
+<li class="leaf">PHAS Reports</li>
+<li class="leaf">PHMI</li>
+<li class="leaf">Pinellas Community Foundation 2018- Home Share</li>
+<details class="node depth-1"><summary>Pinellas COunty CDBG Grant 2014-15</summary>
+<ul>
+<li class="leaf">Final Bids</li>
+</ul></details>
+<li class="leaf">Pinellas County Housing Authority</li>
+<details class="node depth-1"><summary>PPP Paycheck Protection Program</summary>
+<ul>
+<details class="node depth-2"><summary>Valley Bank</summary>
+<ul>
+<li class="leaf">Valley PPP Documents Attached</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Preferred Policy Training Opportunties</li>
+<li class="leaf">Preferred TSHA General Liability</li>
+<li class="leaf">Procurement Purchasing Policy</li>
+<details class="node depth-1"><summary>Public Records Policy</summary>
+<ul>
+<details class="node depth-2"><summary>Public Records Request</summary>
+<ul>
+<li class="leaf">Open The Books Public Records requests</li>
+<li class="leaf">Public Housing Justice Association, LLC</li>
+</ul></details>
+</ul></details>
+<li class="leaf">RAD II</li>
+<li class="leaf">Real Estate Ventures- LCHC</li>
+<li class="leaf">Reina Fire Damage 724B Mango 2017</li>
+<li class="leaf">Repositioning PH</li>
+<li class="leaf">Resident</li>
+<li class="leaf">Resident Grievance</li>
+<li class="leaf">Resolutions</li>
+<details class="node depth-1"><summary>Robert Half Temp Staff</summary>
+<ul>
+<details class="node depth-2"><summary>Robert Half Administration</summary>
+<ul>
+<li class="leaf">Robert Half Billing</li>
+</ul></details>
+</ul></details>
+<li class="leaf">Sarasota HA</li>
+<li class="leaf">Sergio- Barton Gonzalez &amp; Myers</li>
+<li class="leaf">Small Housing Authority</li>
+<li class="leaf">St. Pete Social Action Grant 2017-18</li>
+<details class="node depth-1"><summary>St. Petersburg Social Action June 2016</summary>
+<ul>
+<li class="leaf">Submitted Proposal Documents</li>
+</ul></details>
+<li class="leaf">Tarpon Springs Police Department</li>
+<li class="leaf">TASC FSA Card</li>
+<details class="node depth-1"><summary>TD BANK</summary>
+<ul>
+<li class="leaf">OnBoarding Docs</li>
+<li class="leaf">TD Bank Statements</li>
+</ul></details>
+<li class="leaf">The Villages at Tarpon Insurance 2018</li>
+<li class="leaf">The Villages Budgets</li>
+<li class="leaf">The Villages of Tarpon general</li>
+<li class="leaf">The Villages Pinellas County HOME grant</li>
+<li class="leaf">The Villages REAC Inspections</li>
+<li class="leaf">The Villages Tax Info</li>
+<li class="leaf">The Villages Wells Fargo Bank Account</li>
+<li class="leaf">Trauma Sensitive Research</li>
+<li class="leaf">TSHA  LCHC Board of Directors</li>
+<li class="leaf">TSHA and LCHC BOARD Meetings</li>
+<li class="leaf">TSHA and LCHC Ownership Liabilities</li>
+<details class="node depth-1"><summary>TSHA Financials</summary>
+<ul>
+<li class="leaf">TSHA Financials 2019</li>
+<details class="node depth-2"><summary>TSHA Financials 2020-21</summary>
+<ul>
+<li class="leaf">Agency and Program Allocations</li>
+<details class="node depth-3"><summary>Budget Amendment FY19-20 and New FY20-21</summary>
+<ul>
+<li class="leaf">New FY20-21 Budget info</li>
+</ul></details>
+<li class="leaf">TSHA and LCHC FY21 Monthly Financials April 20-March21</li>
+</ul></details>
+<li class="leaf">TSHA Financials 2021-22</li>
+</ul></details>
+<li class="leaf">TSHA Growth and Sustainability</li>
+<li class="leaf">TSHA LCHC Agency Documentation</li>
+<li class="leaf">TSHA LCHC Insurance Policy Information 2016</li>
+<li class="leaf">TSHA LCHC Personnel 2015</li>
+<li class="leaf">TSHA Personnel 2016</li>
+<li class="leaf">TSHA Personnel 2017</li>
+<details class="node depth-1"><summary>TSHA Personnel 2018</summary>
+<ul>
+<details class="node depth-2"><summary>ED Performance Review 2018</summary>
+<ul>
+<li class="leaf">ED Training  Prof Dev 2018</li>
+</ul></details>
+<details class="node depth-2"><summary>Performance Reviews 2019</summary>
+<ul>
+<li class="leaf">Janeen</li>
+</ul></details>
+</ul></details>
+<details class="node depth-1"><summary>TSHA Personnel 2019</summary>
+<ul>
+<li class="leaf">Cops n Kids Personnel</li>
+<li class="leaf">Personnel Admin</li>
+</ul></details>
+<details class="node depth-1"><summary>TSHA Personnel 2020</summary>
+<ul>
+<li class="leaf">2020 Performance Reviews</li>
+<li class="leaf">Cameron Burris</li>
+<li class="leaf">Personnel Critical Issues</li>
+<li class="leaf">Terminations Separations</li>
+</ul></details>
+<details class="node depth-1"><summary>TSHA Personnel 2021</summary>
+<ul>
+<li class="leaf">2021 Performance Reviews</li>
+</ul></details>
+<li class="leaf">TSHA Personnel Policy</li>
+<details class="node depth-1"><summary>Villages of Tarpon</summary>
+<ul>
+<li class="leaf">Accolade Management</li>
+<li class="leaf">Brown &amp; Brown Insurance</li>
+<li class="leaf">Financials 2018</li>
+</ul></details>
+<li class="leaf">Villages Photos</li>
+</ul></details><li class="leaf">Camera Uploads</li><li class="leaf">Screenshots</li></div>
+</div>
+<script>
+    const expandBtn = document.getElementById('expand-all');
+    const collapseBtn = document.getElementById('collapse-all');
+    const details = () => Array.from(document.querySelectorAll('details.node'));
+    expandBtn.addEventListener('click', () => details().forEach(d => d.open = true));
+    collapseBtn.addEventListener('click', () => details().forEach((d, i) => d.open = (d.classList.contains('depth-0'))));
+  </script>
 </body>
 </html>
