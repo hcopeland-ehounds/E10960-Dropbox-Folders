@@ -4,20 +4,20 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>E10960 Tarpon Springs Housing Association – Personal Dropbox Folder Listing</title>
+<title>E10960 Tarpon Springs Housing Authority – Personal Dropbox Folder Listing</title>
 <style>
     :root {
-      --bg: #8aaed1;  /* much darker muted blue */  /* original muted blue */
-      --card: #ffffff;
-      --text: #0f1c2e;
-      --muted: #5c6b7a;
-      --accent: #2b6cb0;
-      --border: #d6e2f1;
+      --bg: #1f232b;  /* dark background */ #b85c00;  /* darker orange */
+      --card: #2b2f38;  /* dark panel */  /* softer off-white */
+      --text: #e7eaf0;  /* light text */
+      --muted: #a6adbb;  /* muted text */
+      --accent: #ffd257; /* warm accent for carets/icons */
+      --border: #3a404a;  /* subtle border */
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       background: var(--bg);
       color: var(--text);
       line-height: 1.35;
@@ -76,7 +76,7 @@
       transform: rotate(90deg);
     }
     details.node > summary:hover {
-      background: #f3f7fd;
+      background: #2f3541;
     }
     ul {
       list-style: none;
@@ -106,29 +106,27 @@
     }
     .btn {
       border: 1px solid var(--border);
-      background: #f7fbff;
+      background: #2f3541;
       border-radius: 999px;
       padding: .35rem .7rem;
       font-size: .9rem;
       cursor: pointer;
     }
-    .btn:hover { background: #eef6ff; }
+    .btn:hover { background: #3a3f4b; }
   </style>
 </head>
 <body>
 <header>
-<h1>E10960 Tarpon Springs Housing Association</h1>
+<h1>E10960 Tarpon Springs Housing Authority</h1>
 <div class="subtitle">Personal Dropbox Folder Listing</div>
 </header>
 <div class="wrap">
 <div class="legend">
 <button class="btn" id="expand-all">Expand all</button>
 <button class="btn" id="collapse-all">Collapse all</button>
-<span>Rooted at: <strong>Dropbox</strong></span>
 </div>
-<div class="card" id="tree"><details class="node depth-0"><summary>August 2019 Go to Cloud Robbin Home</summary>
-<ul>
-<li class="leaf">2017 Dell Laptop Acronis Back Up download 11-2020</li>
+<div class="card" id="tree">
+<details class="node depth-0"><summary>August 2019 Go to Cloud Robbin Home</summary><ul><li class="leaf">2017 Dell Laptop Acronis Back Up download 11-2020</li>
 <details class="node depth-1"><summary>A Robbin Pictures</summary>
 <ul>
 <details class="node depth-2"><summary>Abu Pictures</summary>
@@ -659,10 +657,8 @@
 <li class="leaf">TSHA LCHC Agency Documentation 2014-15</li>
 <li class="leaf">TSHA LCHC Personnel 2015</li>
 </ul></details>
-</ul></details>
-</ul></details><details class="node depth-0"><summary>October 2015--July 2019 Go To Cloud</summary>
-<ul>
-<li class="leaf">718-720 North Avenue</li>
+</ul></details></ul></details>
+<details class="node depth-0"><summary>October 2015--July 2019 Go To Cloud</summary><ul><li class="leaf">718-720 North Avenue</li>
 <details class="node depth-1"><summary>A Robbin Pictures</summary>
 <ul>
 <details class="node depth-2"><summary>Abu Pictures</summary>
@@ -1149,15 +1145,17 @@
 <li class="leaf">Brown &amp; Brown Insurance</li>
 <li class="leaf">Financials 2018</li>
 </ul></details>
-<li class="leaf">Villages Photos</li>
-</ul></details><li class="leaf">Camera Uploads</li><li class="leaf">Screenshots</li></div>
+<li class="leaf">Villages Photos</li></ul></details>
+<li class="leaf">Camera Uploads</li>
+<li class="leaf">Screenshots</li>
+</div>
 </div>
 <script>
     const expandBtn = document.getElementById('expand-all');
     const collapseBtn = document.getElementById('collapse-all');
     const details = () => Array.from(document.querySelectorAll('details.node'));
     expandBtn.addEventListener('click', () => details().forEach(d => d.open = true));
-    collapseBtn.addEventListener('click', () => details().forEach((d, i) => d.open = (d.classList.contains('depth-0'))));
+    collapseBtn.addEventListener('click', () => details().forEach((d, i) => d.open = false));
   </script>
 </body>
 </html>
